@@ -6,14 +6,15 @@ window.function = function (spg, total) {
   
  const threshold = spg/2;
   
+ var res = spg;
+ 
  for (var i = spg; i > 0; i--) {
    var leftovers = Math.ceil(total/spg)*spg-total;
    if (leftovers < threshold) {
-     return i;
+     res = i;
      break;
    }
-  else {
-   continue;
-  }
  }
+ 
+ return res;
 }
