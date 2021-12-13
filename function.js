@@ -12,5 +12,8 @@ window.function = function (spg, total) {
      return i;
      break;
    }
+  else {
+   continue;
+  }
  }
 }
