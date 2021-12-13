@@ -6,8 +6,8 @@ window.function = function (spg, total) {
   
  let threshold = spg/2;
   
- for (let i = spg; i > 0; i--) {
-   let leftovers = Math.ceil(total/spg)*spg-total;
+ for (var i = spg; i > 0; i--) {
+   var leftovers = Math.ceil(total/spg)*spg-total;
    if (leftovers < threshold) {
      return i;
      break;
