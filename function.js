@@ -1,20 +1,16 @@
 
-window.function = function (txt, number) {
+window.function = function (spg, total) {
 
-  txt = txt.value ?? "";
-  number = number.value ?? 0;
-  let index = txt.indexOf("/");
-  let len = txt.length;
-  number = Math.round(number);
-
-  if (index == -1 || number == "")
-    txt = "0 " + txt.substring(index+1,len);
-
-  else if (number > 1 || number == 0)
-    txt = number + " " + txt.substring(index+1,len);
-
-  else
-    txt = number + " " + txt.substring(0,index);
-
-  return txt;
+ spg = spg.value ?? "";
+ total = total.value ?? "";
+  
+ let threshold = spg/2;
+  
+ for (let i = spg; i > 0; i--) {
+   let leftovers = Math.ceil(total/spg)*spg-total;
+   if (leftovers < threshold) {
+     return i;
+     break;
+   }
+ }
 }
