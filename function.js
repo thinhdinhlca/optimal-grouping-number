@@ -9,7 +9,7 @@ window.function = function (spg, total) {
  var res = spg;
  
  for (var i = spg; i > 0; i--) {
-   var leftovers = Math.ceil(total/spg)*spg-total;
+   var leftovers = Math.ceil(total/i)*i-total;
    if (leftovers < threshold) {
      res = i;
      break;
