@@ -1,23 +1,23 @@
 [
   {
     "kind": "column",
-    "name": "Plural",
-    "description": "Format your text to plural based on a number.",
+    "name": "Optimal students per group",
+    "description": "Get optimal students per group based on a threshold of half the original input.",
     "author": "Thinh Dinh <thinh@lowcode.agency>",
     "params": [
       {
-        "name": "txt",
-        "displayName": "Singular/Plural form of text (e.g: teacher/teachers, shelf/shelves, watch/watches)",
-        "type": "string"
+        "name": "spg",
+        "displayName": "Desired students per group",
+        "type": "number"
       },
       {
-        "name": "number",
-        "displayName": "number",
+        "name": "total",
+        "displayName": "Total students",
         "type": "number"
       }
     ],
     "result": {
-      "type": "string"
+      "type": "number"
     }
   }
 ]
